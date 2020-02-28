@@ -22,8 +22,7 @@ One way to find the optimal number of topics is to build many LDA models with di
 Therefore, the optimal number of topics is 32. The corresponding LDA model will be used for the following analysis.
 
 ## Find the dominant topics
-One of the practical application of topic modeling is to determine what topic a given document is about.
+One of the practical application of topic modeling is to determine what topic a given document is about. I extracted the topic number that has the highest percentage contribution in that document. The assign a score to each hotel in a specific topic, I did dominant topics counts for each topic on the overall reviews and each hotel reviews. For each topic , the ratio of the dominant topic counts for each hotel reviews to dominant topics counts for overall reveiws is the score for each hotel in the specific topic.
+<p align="center"><img src="https://github.com/qianzhangut/happyhotel/blob/master/overall.png" width="500"/></p>
+<p align="center"><img src="https://github.com/qianzhangut/happyhotel/blob/master/hotel1.png" width="500"/></p>
 
-To find that, we find the topic number that has the highest percentage contribution in that document.
-
-The format_topics_sentences() function below nicely aggregates this information in a presentable table.
