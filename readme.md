@@ -6,6 +6,8 @@ You've just joined the data team at a large hotel chain. Your specific team is e
 
 ## EDA
 
+<p align="center"><img src="https://github.com/qianzhangut/happyhotel/blob/master/eda.png" width="500"/></p>
+
 ## Model
 Topic modeling is the process of identifying topics in a set of documents. This can be useful for search engines, customer service automation, and any other instance where knowing the topics of documents is important. LDA model was built to find topics for the customer reviews. LDA is a popular algorithm for topic modeling with excellent implementations in the Python's Gensim package. The challenge, however, is how to extract good quality of topics that are clear, segregated and meaningful. This depends heavily on the quality of text preprocessing and the strategy of finding the optimal number of topics. 
 
@@ -16,10 +18,11 @@ The two main inputs to the LDA topic model are the dictionary (id2word) and the 
 The LDA model is built with 20 different topics where each topic is a combination of keywords and each keyword contributes a certain weightage to the topic. The prelexity and coherence score for this model is -10.36 and 0.49, recpectively. They provide a convenient measure to judge how good a given topic model is
 
 One way to find the optimal number of topics is to build many LDA models with different values of number of topics (k) and pick the one that gives the highest coherence value.
+<p align="center"><img src="https://github.com/qianzhangut/happyhotel/blob/master/best_coherence.png" width="500"/></p>
+Therefore, the optimal number of topics is 32. The corresponding LDA model will be used for the following analysis.
 
 ## Find the dominant topics
-One of the practical application of topic modeling is to determine what topic a given document is about.
+One of the practical application of topic modeling is to determine what topic a given document is about. I extracted the topic number that has the highest percentage contribution in that document. The assign a score to each hotel in a specific topic, I did dominant topics counts for each topic on the overall reviews and each hotel reviews. For each topic , the ratio of the dominant topic counts for each hotel reviews to dominant topics counts for overall reveiws is the score for each hotel in the specific topic.
+<p align="center"><img src="https://github.com/qianzhangut/happyhotel/blob/master/overall.png" width="500"/></p>
+<p align="center"><img src="https://github.com/qianzhangut/happyhotel/blob/master/hotel1.png" width="500"/></p>
 
-To find that, we find the topic number that has the highest percentage contribution in that document.
-
-The format_topics_sentences() function below nicely aggregates this information in a presentable table.
