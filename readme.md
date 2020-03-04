@@ -26,3 +26,5 @@ One of the practical application of topic modeling is to determine what topic a 
 <p align="center"><img src="https://github.com/qianzhangut/happyhotel/blob/master/overall.png" width="500"/></p>
 <p align="center"><img src="https://github.com/qianzhangut/happyhotel/blob/master/hotel1.png" width="500"/></p>
 
+## Reference
+[1]: https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/ Topic Modeling with Gensim (Python)
