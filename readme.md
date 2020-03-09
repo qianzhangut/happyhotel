@@ -13,7 +13,7 @@ Topic modeling is the process of identifying topics in a set of documents. This 
 
 Text was cleaned by 1) convert words to lowercase and remove non alphabetic characters, 2) remove stopwords and stem each word to the root.
 
-The two main inputs to the LDA topic model are the dictionary (id2word) and the corpus. Gensim creates a unique id for each word in the document. It can also creat a bag of words corpus using tfidf. These two are used as input to fit the LDA model.
+The two main inputs to the LDA topic model are the dictionary (id2word) and the corpus. Gensim creates a unique id for each word in the document. It can also creat a bag of words corpus using tfidf. These two are used as input to fit the LDA model. This code was borrowed from this [article](https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/)[1]. Thank you Selva Prabhakaran.
 
 The LDA model is built with 20 different topics where each topic is a combination of keywords and each keyword contributes a certain weightage to the topic. The prelexity and coherence score for this model is -10.36 and 0.49, recpectively. They provide a convenient measure to judge how good a given topic model is
 
